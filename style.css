@@ -1,3 +1,7 @@
+*{
+  scroll-behavior: smooth;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -7,8 +11,24 @@ ul{
   font-family: "Noto Sans";
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container a{
+  text-decoration-thickness: .5em;
+  font-weight: bold;
+  color:black;
+}
+
 .container {
+  top: 0;
+  position: fixed;
   display: flex;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
   height: 75px;
   justify-items: center;
   align-items: center;
@@ -58,7 +78,7 @@ ul{
 
 
 .green{
-  color: #296f2b;
+color: #296f2b;
 }
 
 .article-container p {
@@ -80,4 +100,13 @@ ul{
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px;
+}
+footer{
+  display: flex;
+  height: 100px;
+  font-family: 'Mulish',sans-serif;
+  align-items: center;
+  background: #296f2b;
+  color: #fdfcfd;
+  font-weight: bold;
 }

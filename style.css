@@ -146,6 +146,13 @@ footer{
     height: 40rem;
   }
 
+  .nav{
+    height: 10rem;
+  }
+
+  .nav li{
+  margin-bottom: 2rem;
+  }
 
   .article-container{
   top: .5rem;

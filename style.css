@@ -8,13 +8,16 @@ html{
 }
 
 body{
+  top: 0;
   width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .container{
+  background-color: white;
   display:  inline-flex;
   align-items: center;
   justify-content: space-around;
@@ -22,22 +25,31 @@ body{
   width: 100%;  
 }
 
+
+
 ul{
   list-style: none;
-  font-family: "Noto Sans";
+  font-family: "Montserrat";
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
+  transition-property: color, font-size;
+  transition-duration: 0.10s;
+  transition-timing-function: ease-out;
+  
+}
+
+a:hover{
+  font-size: 2em;
+  font-weight: 2em;
 }
 
 .container a{
   text-decoration-thickness: .5em;
   font-weight: bold;
   color:black;
-}
-.nav ul{
-  align-self: center;
 }
 
 .nav{
@@ -46,11 +58,8 @@ a {
   align-items: center;
   width: 100%;
   height: 5rem;
-  z-index: 99;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-
-
 
 .top-page{
   width: 100%;
@@ -90,6 +99,7 @@ a {
   background-size: cover;
 }
 
+
 .green{
   cursor: pointer;
   color: #296f2b;
@@ -101,6 +111,7 @@ a {
   color: red;
   font-size: 60px;
 }
+
 
 
 .article-container p {
@@ -141,7 +152,6 @@ footer{
   .container{
     flex-direction: row;
   }
-  
 
   .top-page{
     flex-direction: row;
@@ -160,11 +170,16 @@ footer{
     height: 40rem;
   }
 
+  #top-word{
+  align-items: flex-start;
+}
+
+
   .nav{
     height: 10rem;
     justify-content: space-around;
-    align-items: center;
   }
+
 
   .nav li{
     line-height:2rem;
@@ -182,3 +197,4 @@ footer{
     flex-direction: column;
   }
 }
+

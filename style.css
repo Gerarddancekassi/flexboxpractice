@@ -91,7 +91,8 @@ a {
 }
 
 .green{
-color: #296f2b;
+  cursor: pointer;
+  color: #296f2b;
   transition-property: color, font-size;
   transition-duration: 0.25s;
   transition-timing-function: ease-out;

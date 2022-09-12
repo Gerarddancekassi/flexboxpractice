@@ -90,10 +90,17 @@ a {
   background-size: cover;
 }
 
-
 .green{
 color: #296f2b;
+  transition-property: color, font-size;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
 }
+.green:hover{
+  color: red;
+  font-size: 60px;
+}
+
 
 .article-container p {
   text-align: justify;

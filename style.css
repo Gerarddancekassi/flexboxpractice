@@ -2,6 +2,13 @@
   scroll-behavior: smooth;
 }
 
+:root{
+  --bg-white: white;
+  --bg-dark: #121212;
+  --bg-alt: #1f1f1f;
+}
+
+
 html{
   height: auto;
   width: auto;
@@ -14,10 +21,12 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--bg-white);
+
 }
 
 .container{
-  background-color: white;
+  background-color: var(--bg-white);
   display:  inline-flex;
   align-items: center;
   justify-content: space-around;
@@ -49,7 +58,7 @@ a:hover{
 .container a{
   text-decoration-thickness: .5em;
   font-weight: bold;
-  color:black;
+  color:var(--bg-dark);
 }
 
 .nav{
@@ -80,7 +89,7 @@ a:hover{
 #top-word h1{
   width: 60%;
   font-size: 50px;
-  color: #060607;
+  color: var(--bg-dark);
   font-family: "Montserrat";
   margin-bottom: 1rem;
 
@@ -105,13 +114,12 @@ a:hover{
   color: #296f2b;
   transition-property: color, font-size;
   transition-duration: 0.25s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
 }
 .green:hover{
   color: red;
   font-size: 60px;
 }
-
 
 
 .article-container p {
@@ -198,3 +206,32 @@ footer{
   }
 }
 
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: var(--bg-dark);
+    color: var(--bg-white);
+  }
+  .container, .nav{
+    background-color: var(--bg-alt);
+  }
+
+  .container a{
+    color:var(--bg-white);
+  }
+
+  #top-word h1{
+    color: var(--bg-white);
+  }
+
+  .green:hover {
+    text-shadow: 5px 1px 30px red;
+    animation: glow .8s infinite alternate;
+  }
+
+}
+
+@keyframes glow {
+    to {
+      text-shadow: 1px 1px 15px red;
+    }
+}
